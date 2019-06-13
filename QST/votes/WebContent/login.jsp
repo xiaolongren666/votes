@@ -4,13 +4,65 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-<form action="loginServlet" method="post">
-    用户名:<input type="text" name="username"><br>
-    密码：<input type="password" name="password"><br>
-    <input type="submit" value="登录"/>
-</form>
-</body>
+<title></title>
+		<link rel="stylesheet" href="css/login.css" />	
+		<script type="text/javascript" src="js/jquery-1.x.js" ></script>
+		<script>
+			function check(){
+				if(username.value==""||username.value==null||password.value==""||password.value==null){
+					alert("用户名或密码不能为空！")
+					return false
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div class="main">
+			<div class="top">
+				<img src="img/logo.gif" />
+			</div>
+			<div class="mid">
+				<div class="mid01">
+					<img src="img/voteBanner.jpg"/>
+				</div>
+				<div class="mid02">
+					<p class="p1">青软实训</p>
+					<p class="p2">网上调查系统...</p>
+				</div>
+				<div class="mid03">
+					<div class="head">
+						用户登录 &nbsp;  <img src="img/arrow_down.gif" /> <span style="color: red">${requestScope.msg }</span>
+					</div>
+					<div class="line1"></div>
+					<form action="loginServlet" method="post" onsubmit="return check();">
+						<table>
+							<tr>
+								<td>用户名：</td>
+								<td><input type="text" name="username" id="username"/></td>
+							</tr>
+							<tr>
+								<td>密码：</td>
+								<td><input type="password" name="passwrod" id="password" /></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>
+									
+									<input type="submit" value="   登录" style="width:77px; height:32px;border:0;background:url(img/button_login.gif);"  />
+									
+									<a href="admin/reg.jsp">新用户注册</a>
+								</td>
+							</tr>
+						</table>
+					</form>
+				</div>
+				
+			</div>
+			<div class="line2"></div>
+			<div class="end">
+				青软实训 &copy; 版权所有
+			</div>
+		</div>
+	</body>
 </html>

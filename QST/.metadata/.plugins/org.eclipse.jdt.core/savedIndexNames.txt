@@ -1,2 +1,0 @@
-INDEX VERSION 1.127+D:\QST\.metadata\.plugins\org.eclipse.jdt.core
-1562895613.index
